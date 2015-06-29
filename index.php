@@ -8,13 +8,13 @@ $country_code = $geoplugin->countryCode;
 
 switch( $country_code ) {
 	case 'NL':
-		header('Location: http://subbacultcha.nl');
+		header('Location: ' . get_option('redirect_NL', 'http://google.nl'));
 		exit;
 	case 'BE':
-		header('Location: http://subbacultcha.nl');
+		header('Location: ' . get_option('redirect_BE', 'http://google.be'));
 		exit;
 	default:
-		header('Location: http://subbacultcha.nl');
+		header('Location: ' . get_option('redirect_default', 'http://google.com'));
 		exit;
 }
 
